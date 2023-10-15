@@ -1,34 +1,55 @@
 <div class="container mt-5">
 
+  <h1>Generador de componentes dinamicos</h1>
+  <p>Con la intencion de probar la capacidad del framework Boostrap en el uso de recursos de acuerdo a la implementacion
+    de componentes que se contruyen dinamicamente</p>
 
-  <label for="size">Mostrar: {{size.value}} de {{articles.results.length}}</label>
-  <input class="form-control mb-3" id="size" type="number" [formControl]="size" min="0"
-    max="{{articles.results.length}}">
+  <label for="cardGeneratorField">Generar Cards dinamicas</label>
+  <input class="form-control mb-3" id="cardGeneratorField" type="number" [formControl]="cardGeneratorField" min="0"
+    max="{{cardGeneratorField}}">
   <hr>
-  <p class="small">
-    No elevar mucho el numero puede causar problemas de rendimiento
-  </p>
 
-  <div class="fw-bold text-danger mb-3 small" *ngIf="state">
-    {{state}}
-  </div>
+  <label for="lines">Generar Cards dinamicas</label>
+  <input class="form-control mb-3" id="lines" type="number" [formControl]="lines" min="0"
+    max="{{lines}}">
+  <hr>
 
-  <div *ngIf="validateField(size.value)" class="row">
-    <div *ngFor="let article of articles.results.slice(0, size.value)" class="col-md-6 col-lg-4 col-xl-3">
+  <div *ngIf="cardGeneratorField" class="row">
+    <div *ngFor="let item of [].constructor(cardGeneratorField.value); let i = index" class="col-md-6 col-lg-4 col-xl-3">
       <div class="rounded-3 border mb-3">
-        <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{article.image}}" alt="{{article.title}}">
+        <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
 
         <div class="p-3">
-          {{article.title}}
+          {{card.title}}
           <p class="small">
 
-            {{article.description}}
+            {{card.description}}
           </p>
         </div>
       </div>
     </div>
   </div>
 
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of [].constructor(lines.value); let i = index">
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+     
+    </tbody>
+  </table>
 </div>
 
 
