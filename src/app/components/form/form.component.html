@@ -1,0 +1,33 @@
+
+
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Ejemplo
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <pre>
+                {{jsonExample | json}}
+            </pre>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+<textarea class="form-control mb-2" [(ngModel)]="jsonInput" name="jsonInput" rows="15" required></textarea>
+<button class="btn btn-success small mb-3" (click)="construirFormularioDesdeJSON()">Construir Formulario</button>
+
+<div class="p-3 rounded-3 border">
+    <!-- Muestra el formulario construido -->
+    <form [formGroup]="formulario">
+        <div *ngFor="let controlName of formulario.controls | keyvalue">
+            <label [for]="controlName.key">{{ controlName.key }}:</label>
+            <input class="form-control mb-3" type="text" [id]="controlName.key" [formControlName]="controlName.key">
+        </div>
+    </form>
+</div>
