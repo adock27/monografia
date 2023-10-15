@@ -1,22 +1,20 @@
-
-
-
 <div class="container mt-5">
 
 
   <label for="size">Mostrar: {{size.value}} de {{articles.results.length}}</label>
-  <input class="form-control mb-3" id="size" type="number" [formControl]="size" min="0" max="{{articles.results.length}}">
-<hr>
-<p class="small">
-  No elevar mucho el numero puede causar problemas de rendimiento
-</p>
+  <input class="form-control mb-3" id="size" type="number" [formControl]="size" min="0"
+    max="{{articles.results.length}}">
+  <hr>
+  <p class="small">
+    No elevar mucho el numero puede causar problemas de rendimiento
+  </p>
 
   <div class="fw-bold text-danger mb-3 small" *ngIf="state">
     {{state}}
   </div>
-  
+
   <div *ngIf="validateField(size.value)" class="row">
-    <div *ngFor="let article of articles.results.slice(0, size.value)" class="col-3 col-md-6 col-lg-4 col-xl-3">
+    <div *ngFor="let article of articles.results.slice(0, size.value)" class="col-md-6 col-lg-4 col-xl-3">
       <div class="rounded-3 border mb-3">
         <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{article.image}}" alt="{{article.title}}">
 
@@ -30,7 +28,7 @@
       </div>
     </div>
   </div>
-  
+
 </div>
 
 

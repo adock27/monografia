@@ -38,4 +38,7 @@ export class AppComponent {
     return true;
   }
 
+  // ng build --base-href "./" --deploy-url "./"
+
+
 }
