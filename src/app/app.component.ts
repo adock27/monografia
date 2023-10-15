@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { articles } from './json/articles';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +13,14 @@ export class AppComponent {
 
   articles: any;
 
-  url: string = '/assets/articles.json';
+
 
   size = new FormControl(8);
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(res => {
-      this.articles = res;
-    });
+   this.articles = articles
   }
 
 
