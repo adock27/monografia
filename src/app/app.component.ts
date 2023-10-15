@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'monografia';
+
+  articles: any;
+
+  url: string = '/assets/articles.json';
+
+  size = new FormControl(8);
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get(this.url).subscribe(res => {
+      this.articles = res;
+    });
+  }
+
+
+  state: any;
+
+
+  validateField(number: any) {
+
+    if (isNaN(number)) { this.state = 'No es un numero'; return false };
+    if (number > this.articles.length) { this.state = 'No puede ser mayor'; return false };
+    if (number == null) { this.state = 'No puede estar vacio'; return false };
+    if (number < 1) { this.state = 'No puede ser 0'; return false };
+    if (number > 1000) { this.state = 'Rendimiento lento'; return true };
+    this.state = ''
+    return true;
+  }
+
 }
