@@ -29,9 +29,10 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" 
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ],
-            "baseHref": "https://adock27.github.io/monografia"
+            "baseHref": "./monografia",
+            "deployUrl": "./"
           },
           "configurations": {
             "production": {
