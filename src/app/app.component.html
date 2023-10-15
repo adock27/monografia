@@ -6,16 +6,16 @@
 
   <label for="cardGeneratorField">Generar Cards dinamicas</label>
   <input class="form-control mb-3" id="cardGeneratorField" type="number" [formControl]="cardGeneratorField" min="0"
-    max="{{cardGeneratorField}}">
+    max="{{cardGeneratorField.value}}">
   <hr>
 
   <label for="lines">Generar Cards dinamicas</label>
-  <input class="form-control mb-3" id="lines" type="number" [formControl]="lines" min="0"
-    max="{{lines}}">
+  <input class="form-control mb-3" id="lines" type="number" [formControl]="lines" min="0" max="{{lines}}">
   <hr>
 
-  <div *ngIf="cardGeneratorField" class="row">
-    <div *ngFor="let item of [].constructor(cardGeneratorField.value); let i = index" class="col-md-6 col-lg-4 col-xl-3">
+  <div *ngIf="cardGeneratorField.value" class="row">
+    <div *ngFor="let item of [].constructor(cardGeneratorField.value); let i = index"
+      class="col-md-6 col-lg-4 col-xl-3">
       <div class="rounded-3 border mb-3">
         <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
 
@@ -31,25 +31,29 @@
   </div>
 
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of [].constructor(lines.value); let i = index">
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-     
-    </tbody>
-  </table>
+  <div *ngIf="lines.value">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of [].constructor(lines.value); let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
 </div>
 
 
