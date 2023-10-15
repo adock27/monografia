@@ -30,7 +30,8 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" 
-            ]
+            ],
+            "baseHref": "https://adock27.github.io/monografia"
           },
           "configurations": {
             "production": {
