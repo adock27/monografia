@@ -4,55 +4,46 @@
   <p>Con la intencion de probar la capacidad del framework Boostrap en el uso de recursos de acuerdo a la implementacion
     de componentes que se contruyen dinamicamente</p>
 
-  <label for="cardGeneratorField">Generar Cards dinamicas</label>
-  <input class="form-control mb-3" id="cardGeneratorField" type="number" [formControl]="cardGeneratorField" min="0"
-    max="{{cardGeneratorField.value}}">
-  <hr>
 
-  <label for="lines">Generar Cards dinamicas</label>
-  <input class="form-control mb-3" id="lines" type="number" [formControl]="lines" min="0" max="{{lines}}">
-  <hr>
 
-  <div *ngIf="cardGeneratorField.value" class="row">
-    <div *ngFor="let item of [].constructor(cardGeneratorField.value); let i = index"
-      class="col-md-6 col-lg-4 col-xl-3">
-      <div class="rounded-3 border mb-3">
-        <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
 
-        <div class="p-3">
-          {{card.title}}
-          <p class="small">
 
-            {{card.description}}
-          </p>
-        </div>
-      </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+        role="tab" aria-controls="home-tab-pane" aria-selected="true">Cards</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
+        role="tab" aria-controls="profile-tab-pane" aria-selected="false">Tabla</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
+        role="tab" aria-controls="contact-tab-pane" aria-selected="false">Formulario desde json</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button"
+        role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Comming soon..</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <app-card></app-card>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+      <app-table></app-table>
+    </div>
+
+
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+    </div>
+
+
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
     </div>
   </div>
-
-
-  <div *ngIf="lines.value">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of [].constructor(lines.value); let i = index">
-          <th scope="row">{{i+1}}</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
-
 
 </div>
 
