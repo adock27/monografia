@@ -1,0 +1,15 @@
+<div class="row">
+  <div *ngFor="let item of [].constructor(3); let i = index" class="col-md-6 col-lg-4">
+ 
+    <div class="max-w-sm rounded overflow-hidden shadow-sm bg-white">
+      <img class="w-full" style="aspect-ratio: 1 / 1;"  src="{{card.image}}" alt="{{card.title}}">
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{card.title}}</div>
+        <p class="text-gray-700 text-base small">
+          {{card.description}}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

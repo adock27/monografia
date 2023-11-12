@@ -1,13 +1,74 @@
-<div class="container mt-5">
+<div class="container-fluid mt-5">
 
-  <h1>Generador de componentes dinamicos</h1>
-  <p>Con la intencion de probar la capacidad del framework Boostrap en el uso de recursos de acuerdo a la implementacion
-    de componentes que se contruyen dinamicamente</p>
+  <h1>Comparacion de framework</h1>
+  <p>Puntos a comparar</p>
+  <p>Estilos</p>
+  <p>Complejidad de codigo</p>
+  <p>Componentes disponibles</p>
+
+  <div class="row">
+    <div class="col-6">
+      <h2>Tailwindcss</h2>
+      <h6 class="mt-5">Formularios</h6>
+      <app-form-tails></app-form-tails>
+
+      <h6 class="mt-5">Cards</h6>
+      <hr>
+      <app-card-tails></app-card-tails>
+
+
+      <h6 class="mt-5">Accordions</h6>
+      <hr>
+      <app-accordion-tails></app-accordion-tails>
+      <div class="border rounded">
+        <!-- Primer ítem del acordeón -->
+        <div class="border-b">
+          <button class="w-full text-left p-3 focus:outline-none hover:bg-gray-200">
+            Título del primer ítem
+          </button>
+          <div class="p-3 hidden">
+            Contenido del primer ítem
+          </div>
+        </div>
+
+        <!-- Segundo ítem del acordeón -->
+        <div class="border-b">
+          <button class="w-full text-left p-3 focus:outline-none hover:bg-gray-200">
+            Título del segundo ítem
+          </button>
+          <div class="p-3 hidden">
+            Contenido del segundo ítem
+          </div>
+        </div>
+
+        <!-- Puedes añadir más ítems del acordeón según sea necesario -->
+      </div>
 
 
 
 
+    </div>
+    <div class="col-6">
+      <h2>Boostrap</h2>
 
+      <h6 class="mt-5">Formularios</h6>
+      <app-form></app-form>
+
+
+      <h6 class="mt-5">Cards</h6>
+      <hr>
+      <app-card></app-card>
+
+      <h6 class="mt-5">Accordions</h6>
+      <hr>
+      <app-accordion></app-accordion>
+
+    </div>
+  </div>
+
+
+
+  <!-- 
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
@@ -43,7 +104,7 @@
 
     <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
     </div>
-  </div>
+  </div> -->
 
 </div>
 
