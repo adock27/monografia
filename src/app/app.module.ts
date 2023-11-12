@@ -13,6 +13,9 @@ import { FormTailsComponent } from './components/form-tails/form-tails.component
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionTailsComponent } from './components/accordion-tails/accordion-tails.component';
 import { ComparativeComponentsComponent } from './components/comparative-components/comparative-components.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ButtonTailsComponent } from './components/button-tails/button-tails.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { ComparativeComponentsComponent } from './components/comparative-compone
     FormTailsComponent,
     AccordionComponent,
     AccordionTailsComponent,
-    ComparativeComponentsComponent
+    ComparativeComponentsComponent,
+    ButtonComponent,
+    ButtonTailsComponent,
   ],
   imports: [
     BrowserModule,
