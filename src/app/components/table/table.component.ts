@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 export class TableComponent {
 
 
-  lines = new FormControl(0);
+  lines = new FormControl(12);
 
 
 }

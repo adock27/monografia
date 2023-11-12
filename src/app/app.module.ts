@@ -15,6 +15,7 @@ import { AccordionTailsComponent } from './components/accordion-tails/accordion-
 import { ComparativeComponentsComponent } from './components/comparative-components/comparative-components.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ButtonTailsComponent } from './components/button-tails/button-tails.component';
+import { TableTailsComponent } from './components/table-tails/table-tails.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ButtonTailsComponent } from './components/button-tails/button-tails.com
     ComparativeComponentsComponent,
     ButtonComponent,
     ButtonTailsComponent,
+    TableTailsComponent,
   ],
   imports: [
     BrowserModule,
