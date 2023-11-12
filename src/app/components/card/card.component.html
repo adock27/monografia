@@ -1,11 +1,6 @@
-<!-- <label for="cardGeneratorField">Generar Cards dinamicas</label>
-<input class="form-control mb-3" id="cardGeneratorField" type="number" [formControl]="cardGeneratorField" min="0"
-  max="{{cardGeneratorField.value}}">
-<hr> -->
-
 
 <div class="row">
-  <div *ngFor="let item of [].constructor(3); let i = index" class="col-md-6 col-lg-4">
+  <div *ngFor="let item of [].constructor(2); let i = index" class="col-md-6">
     <div class="rounded-3 border mb-3 bg-white">
       <img class="img-fluid" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
       <div class="p-3">

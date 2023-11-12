@@ -12,6 +12,7 @@ import { CardTailsComponent } from './components/card-tails/card-tails.component
 import { FormTailsComponent } from './components/form-tails/form-tails.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { AccordionTailsComponent } from './components/accordion-tails/accordion-tails.component';
+import { ComparativeComponentsComponent } from './components/comparative-components/comparative-components.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AccordionTailsComponent } from './components/accordion-tails/accordion-
     CardTailsComponent,
     FormTailsComponent,
     AccordionComponent,
-    AccordionTailsComponent
+    AccordionTailsComponent,
+    ComparativeComponentsComponent
   ],
   imports: [
     BrowserModule,

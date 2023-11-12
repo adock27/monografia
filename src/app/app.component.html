@@ -1,86 +1,107 @@
-<div class="container-fluid mt-5">
+<div class="container mt-5">
 
   <h1>Comparacion de framework</h1>
   <hr>
   <br>
-  <div class="row">
-    <div class="col-6">
-      <h2>Tailwindcss</h2>
-      <h6 class="mt-5">Formularios</h6>
-      <app-form-tails></app-form-tails>
-
-      <h6 class="mt-5">Cards</h6>
-      <hr>
-      <app-card-tails></app-card-tails>
-
-
-      <h6 class="mt-5">Accordions</h6>
-      <hr>
-      <app-accordion-tails></app-accordion-tails>
-     
 
 
 
+  <div class="accordion" id="accordionExample">
 
+    <!-- Formularios -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Formularios
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+          <div class="row">
+            <div class="col-6">
+              <!-- <h2>Tailwindcss</h2> -->
+              <h6 class="mt-2">Tailwindcss</h6>
+              <app-form-tails></app-form-tails>
+            </div>
+            <div class="col-6">
+              <!-- <h2>Boostrap</h2> -->
+              <h6 class="mt-2">Boostrap</h6>
+              <app-form></app-form>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="col-6">
-      <h2>Boostrap</h2>
 
-      <h6 class="mt-5">Formularios</h6>
-      <app-form></app-form>
+    <!-- Cards -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Cards
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+
+          <div class="row">
+            <div class="col-6">
+              <h6 class="mt-2">Tailwindcss</h6>
+              <hr>
+              <app-card-tails></app-card-tails>
 
 
-      <h6 class="mt-5">Cards</h6>
-      <hr>
-      <app-card></app-card>
+            </div>
+            <div class="col-6">
 
-      <h6 class="mt-5">Accordions</h6>
-      <hr>
-      <app-accordion></app-accordion>
+              <h6 class="mt-2">Boostrap</h6>
+              <hr>
+              <app-card></app-card>
+            </div>
+          </div>
 
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordions -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordions
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+            <div class="col-6">
+
+
+              <h6 class="mt-2">Tailwindcss</h6>
+              <hr>
+              <app-accordion-tails></app-accordion-tails>
+
+            </div>
+            <div class="col-6">
+              <h6 class="mt-2">Boostrap</h6>
+              <hr>
+              <app-accordion></app-accordion>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
 
 
 
-  <!-- 
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
-        role="tab" aria-controls="home-tab-pane" aria-selected="true">Cards</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button"
-        role="tab" aria-controls="profile-tab-pane" aria-selected="false">Tabla</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button"
-        role="tab" aria-controls="contact-tab-pane" aria-selected="false">Formulario desde json</button>
-    </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button"
-        role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Comming soon..</button>
-    </li>
-  </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      <app-card></app-card>
-    </div>
-    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-
-      <app-table></app-table>
-    </div>
-
-
-    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-      <app-form></app-form>
-    </div>
-
-
-    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
-    </div>
-  </div> -->
 
 </div>
-
-
