@@ -16,6 +16,10 @@ import { ComparativeComponentsComponent } from './components/comparative-compone
 import { ButtonComponent } from './components/button/button.component';
 import { ButtonTailsComponent } from './components/button-tails/button-tails.component';
 import { TableTailsComponent } from './components/table-tails/table-tails.component';
+import { AnimationTailsComponent } from './components/animation-tails/animation-tails.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { OffCanvasComponent } from './components/off-canvas/off-canvas.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -32,6 +36,10 @@ import { TableTailsComponent } from './components/table-tails/table-tails.compon
     ButtonComponent,
     ButtonTailsComponent,
     TableTailsComponent,
+    AnimationTailsComponent,
+    CarouselComponent,
+    OffCanvasComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

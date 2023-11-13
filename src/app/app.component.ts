@@ -14,5 +14,4 @@ export class AppComponent {
 
   // ng build --base-href "./" --deploy-url "./"
 
-
 }
