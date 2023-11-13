@@ -4,7 +4,13 @@
     <div class="row">
         <h3 class="fw-bold mb-1">Test de rendimiento Tailwind</h3>
         <p class="mb-3">Ejemplo de rendimiento renderizando 10 mil tarjetas</p>
-        <div *ngFor="let item of [].constructor(10000); let i = index" class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+        <!-- Using utilities: -->
+        <div>
+            <button *ngIf="msg" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2" (click)="initTest()">
+                {{msg}}
+            </button>
+        </div>
+        <div *ngFor="let item of [].constructor(counter); let i = index" class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
             <div class="max-w-sm rounded overflow-hidden shadow-sm bg-white mb-3">
                 <img class="w-full" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
                 <div class="px-6 py-4">
