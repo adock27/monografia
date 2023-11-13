@@ -20,6 +20,10 @@ import { AnimationTailsComponent } from './components/animation-tails/animation-
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { OffCanvasComponent } from './components/off-canvas/off-canvas.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { TailwindComponent } from './pages/tailwind/tailwind.component';
+import { BoostrapComponent } from './pages/boostrap/boostrap.component';
+import { ComparativeComponent } from './pages/comparative/comparative.component';
 
 
 @NgModule({
@@ -40,6 +44,10 @@ import { ModalComponent } from './components/modal/modal.component';
     CarouselComponent,
     OffCanvasComponent,
     ModalComponent,
+    InicioComponent,
+    TailwindComponent,
+    BoostrapComponent,
+    ComparativeComponent,
   ],
   imports: [
     BrowserModule,
