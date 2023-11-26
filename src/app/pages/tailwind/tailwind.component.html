@@ -3,18 +3,33 @@
 
     <div class="row">
         <h3 class="fw-bold mb-1">Test de rendimiento Tailwind</h3>
-        <p class="mb-3">Ejemplo de rendimiento renderizando 10 mil tarjetas</p>
+
+        <div class="px-3">
+            <label for="counterMax">Inserte numero de card a procesar</label>
+            <input class="form-control mb-3 p-1" id="counterMax" type="number" [formControl]="cardGeneratorField" min="0"
+                max="{{cardGeneratorField}}">
+            <p class="small text-danger mb-3">Un numero muy alto puede causar problemas de rendimiento</p>
+            <p>Tajetas procesadas: {{counter}}</p>
+            <p *ngIf="seconds">Segundos de proceso: {{seconds}}</p>
+            <div *ngIf="counter!=0" class="progress my-4 px-0" role="progressbar" aria-label="Basic example">
+                <div class="progress-bar" [ngStyle]="{'width': ((counter/counterMax)*100)+'%' }">
+                    {{(counter/counterMax)*100 | number: '1.0-0'}}%</div>
+            </div>
+        </div>
+       
+
         <!-- Using utilities: -->
-        <div>
-            <button *ngIf="msg" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2" (click)="initTest()">
+        <div class="mt-3">
+            <button *ngIf="msg" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2"
+                (click)="initTest()">
                 {{msg}}
             </button>
         </div>
-        <div *ngFor="let item of [].constructor(counter); let i = index" class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+        <div *ngFor="let item of [].constructor(counter); let i = index" class="col-6 col-lg-4 col-xl-3 col-xxl-2">
             <div class="max-w-sm rounded overflow-hidden shadow-sm bg-white mb-3">
-                <img class="w-full" style="aspect-ratio: 1 / 1;" src="{{card.image}}" alt="{{card.title}}">
+                <img class="w-full" style="aspect-ratio: 1 / 1;object-fit: cover;" src="{{card.image}}" alt="{{card.title}}">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">{{card.title}}</div>
+                    <div class="font-bold text-xl mb-2">{{card.title}} + {{i}}</div>
                     <p class="text-gray-700 text-base small mb-3">
                         {{card.description}}
                     </p>
