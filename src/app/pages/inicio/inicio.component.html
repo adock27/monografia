@@ -1,6 +1,6 @@
 <div class="container mt-5">
 
-    <h1>Comparacion de framework</h1>
+  <!-- <h1>Comparacion de framework</h1>
     <hr>
     <br>
   
@@ -53,6 +53,200 @@
         <li class="ul1">Tailwind CSS ofrece un sistema de cuadrícula flexible con puntos de interrupción personalizados.
         </li>
       </ul>
-    </div>
-  
-  </div>
+    </div> -->
+
+  <h1>Comparacion de frameworks</h1>
+  <table style="width: 100%; border-color: #000; border-width: 1px;" border="1" cellspacing="5" cellpadding="5">
+    <tbody>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h3><strong>Bootstrap </strong></h3>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h3><strong>Tailwind CSS </strong></h3>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Enfoque</h4>
+          <ul>
+            <li class="ul1">Bootstrap es un marco basado en componentes que proporciona componentes y elementos de
+              interfaz de usuario prediseñados.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Enfoque</h4>
+          <br />
+          <ul>
+            <li class="ul1">Tailwind CSS es un marco de utilidad que ofrece clases de CSS de bajo nivel para crear
+              componentes de interfaz de usuario personalizados.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;"> 
+          <h4 class="ol1">Estilo</h4>
+          <ul>
+            <li class="ul1">Bootstrap aplica estilos globales e incluye temas prediseñados.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;"> 
+          <h4 class="ol1">Estilo</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS no aplica estilos globales y fomenta el estilo personalizado.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4 class="ol1">Personalización</h4>
+          <ul>
+            <li>Bootstrap ofrece personalización limitada a través de variables SCSS.</li>
+          </ul>
+          <p>Ejemplo:</p>
+          <pre class="ul1" style="padding-left: 30px;"><code class="language-plaintext">$primary: #4a148c;
+@import 'bootstrap/scss/bootstrap';</code></pre>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4> Personalización</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS proporciona una amplia personalización a través de archivos de configuración.
+            </li>
+          </ul>
+          <p>Ejemplo:</p>
+          <pre class="ul1" style="padding-left: 30px;"><code class="language-plaintext">{{"module.exports = {
+  theme: {
+    extend: {
+      backgroundColor: {
+        'primary': '#4a148c',
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+};"}}</code></pre>
+          <p> </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4 class="ol1">Tamaño del archivo</h4>
+          <ul>
+            <li class="ul1">Bootstrap tiene un tamaño de archivo más grande, incluidos componentes que no puedes usar.
+            </li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4 class="ol1">Tamaño del archivo</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS genera un tamaño de archivo más pequeño y solo incluye las utilidades
+              utilizadas.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4 class="ol1">JavaScript</h4>
+          <ul>
+            <li class="ul1">Bootstrap requiere jQuery para algunos componentes, como modales y información sobre
+              herramientas.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4> JavaScript</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS no requiere JavaScript para diseñar, pero se puede ampliar con JavaScript si es
+              necesario.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Curva de aprendizaje</h4>
+          <ul>
+            <li class="ul1">Bootstrap tiene una curva de aprendizaje suave, ya que se basa en una sintaxis familiar de
+              HTML y CSS.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4> Curva de aprendizaje</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS tiene una curva de aprendizaje más pronunciada, debido a su enfoque de utilidad
+              primero y su sintaxis personalizada.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4> Responsividad</h4>
+          <ul>
+            <li class="ul1">Bootstrap utiliza un sistema de cuadrícula de 12 columnas predefinido para mejorar la
+              capacidad de respuesta.</li>
+          </ul>
+          <p> </p>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4> Responsividad</h4>
+          <ul>
+            <li class="ul1">Tailwind CSS ofrece un sistema de cuadrícula flexible con puntos de interrupción
+              personalizados.</li>
+          </ul>
+          <p> </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Restricciones de diseño</h4>
+          <ul>
+            <li>Bootstrap puede limitar la creatividad del diseño debido a sus componentes prediseñados.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Restricciones de diseño</h4>
+          <ul>
+            <li>Tailwind CSS fomenta diseños únicos a través de su enfoque de utilidad primero.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Comunidad y ecosistema</h4>
+          <ul>
+            <li>Bootstrap tiene una comunidad más grande y extensas bibliotecas y plantillas de terceros.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Comunidad y ecosistema</h4>
+          <ul>
+            <li>Tailwind CSS tiene una comunidad en crecimiento, pero menos recursos de terceros.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Versionado</h4>
+          <ul>
+            <li>Bootstrap is currently on version 5.</li>
+          </ul>
+        </td>
+        <td style="width: 50%; border-color: #000000; vertical-align: top;">
+          <h4>Versionado</h4>
+          <ul>
+            <li>Tailwind CSS se encuentra actualmente en la versión 3.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="mt-4">En conclusión, tanto Bootstrap como Tailwind CSS son marcos poderosos, cada uno con sus propias
+    fortalezas y filosofías de diseño. La elección entre los dos depende de los requisitos de su proyecto, las
+    preferencias personales y el nivel de personalización necesario. Si está buscando un marco que permita la creación
+    rápida de prototipos y ofrezca una amplia gama de componentes prediseñados, Bootstrap podría ser la mejor opción.
+    Por otro lado, si prefieres un enfoque más modular y un mayor control sobre tu diseño, Tailwind CSS sería la opción
+    ideal. Independientemente de su elección, ambos marcos pueden ayudarlo a crear aplicaciones web responsivas y
+    visualmente atractivas, al tiempo que mejoran su productividad y experiencia de desarrollo general. También puede
+    leer más sobre la comparación de Bootstrap y Tailwind CSS, y cómo usar bootstrap y cómo usar las guías de Tailwind
+    CSS.</p>
+
+</div>
