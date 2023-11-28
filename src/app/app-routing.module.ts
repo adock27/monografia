@@ -9,7 +9,11 @@ const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'comparative', component: ComparativeComponent },
   { path: 'tailwind', component: TailwindComponent },
-  { path: 'boostrap', component: BoostrapComponent }
+  { path: 'boostrap', component: BoostrapComponent },
+  {
+    path: '**', pathMatch: 'full',
+    component: InicioComponent
+  },
 ];
 
 @NgModule({
